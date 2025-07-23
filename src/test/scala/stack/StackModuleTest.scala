@@ -1,3 +1,4 @@
+
 package stack
 
 import scala.util.Random
@@ -130,3 +131,4 @@ class StackModuleTest extends AnyFreeSpec with ChiselScalatestTester {
     }
   }
 }
+

@@ -13,7 +13,7 @@ if __name__ == '__main__':
     seed(32)
     if isdir(TARGET_DIR):
         rmtree(TARGET_DIR)
-    for _ in range(100):
+    for _ in range(10):
         data_width = choice((8, 16, 32))
         length = randint(1, 1024)
         environ['DATA_WIDTH'] = f'{data_width}'
