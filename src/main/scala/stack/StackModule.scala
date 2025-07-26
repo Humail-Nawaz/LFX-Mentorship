@@ -56,10 +56,6 @@ class StackModule(val dataWidth: Int, val len: Int) extends Module {
     val pushVal = Wire(UInt(dataWidth.W))
     pushVal := immZext
 
-    val isPush = opcode === "b0100111".U
-    val isPop  = opcode === "b1000011".U
-    val isPeek = opcode === "b1000000".U
-
     // Clear flags every cycle unless set
     underflowReg := false.B
     overflowReg := false.B
@@ -67,14 +63,18 @@ class StackModule(val dataWidth: Int, val len: Int) extends Module {
     peekedReg := false.B
     outReg := 0.U
 
-    when (isPush) {
+    switch(opcode){
+// PUSH 
+  is("b0100111".U){
   when (io.isFull) {
     overflowReg := true.B
   } .otherwise {
     stack(sp) := pushVal
     sp := sp + 1.U
   }
- }.elsewhen (isPop) {
+ }
+ // POP 
+ is("b1000011".U){
       when (sp === 0.U) {
         underflowReg := true.B
         outReg := 0.U
@@ -84,7 +84,9 @@ class StackModule(val dataWidth: Int, val len: Int) extends Module {
         poppedReg := true.B
       }
 
-    } .elsewhen (isPeek) {
+    } 
+ //PEEK
+    is("b1000000".U){
       when (sp === 0.U) {
         underflowReg := true.B
         outReg := 0.U
@@ -93,6 +95,7 @@ class StackModule(val dataWidth: Int, val len: Int) extends Module {
         peekedReg := true.B
       }
     }
+  }
   }
 }
 //CODE ENDS
