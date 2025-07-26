@@ -1,43 +1,47 @@
 [*]
 [*] GTKWave Analyzer v3.3.103 (w)1999-2019 BSI
-[*] Wed Jul 23 08:56:08 2025
+[*] Sat Jul 26 09:03:28 2025
 [*]
 [dumpfile] "/home/u20/Desktop/LFX-Mentorship/dump.vcd"
-[dumpfile_mtime] "Wed Jul 23 08:36:38 2025"
-[dumpfile_size] 213351
-[savefile] "/home/u20/Desktop/LFX-Mentorship/log.gtkw"
+[dumpfile_mtime] "Sat Jul 26 09:01:43 2025"
+[dumpfile_size] 216566
+[savefile] "/home/u20/Desktop/LFX-Mentorship/result.gtkw"
 [timestart] 0
 [size] 1294 598
 [pos] -51 -1
-*-12.969948 520 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
-[sst_width] 48
-[signals_width] 417
-[sst_expanded] 0
+*-17.825558 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 150
+[sst_expanded] 1
 [sst_vpaned_height] 144
 @28
 StackModule.clock
+@22
 StackModule.immRaw[24:0]
 StackModule.immZext[25:0]
 StackModule.io_in[31:0]
+@28
 StackModule.io_isEmpty
 StackModule.io_isFull
+@22
 StackModule.io_out[31:0]
-@29
-StackModule.io_overflow
 @28
+StackModule.io_overflow
 StackModule.io_peeked
 StackModule.io_popped
 StackModule.io_underflow
-StackModule.isPeek
-StackModule.isPop
-StackModule.isPush
+@22
 StackModule.opcode[6:0]
 StackModule.outReg[31:0]
+@28
 StackModule.overflowReg
 StackModule.peekedReg
 StackModule.poppedReg
+@22
 StackModule.pushVal[31:0]
+@28
 StackModule.reset
+@22
 StackModule.sp[8:0]
 StackModule.stack_0[31:0]
 StackModule.stack_1[31:0]
@@ -298,6 +302,7 @@ StackModule.stack_255[31:0]
 StackModule.stack_256[31:0]
 StackModule.stack_257[31:0]
 StackModule.stack_258[31:0]
+@28
 StackModule.underflowReg
 [pattern_trace] 1
 [pattern_trace] 0
